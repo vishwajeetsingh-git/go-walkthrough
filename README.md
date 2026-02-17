@@ -23,4 +23,7 @@ then run
 go get modulename
 ```
 
+---
+Lesson 3
+
 
