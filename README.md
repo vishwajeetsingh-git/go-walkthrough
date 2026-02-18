@@ -321,3 +321,20 @@ Counting...
 Counting done
 ```
 
+## Lesson 12 
+
+Pointers in Go 
+
+Go has Pointers. A pointer holds memory address of another variable. 
+The synax for declaration of Pointer in go is. 
+
+```go
+var p *TYPE 
+```
+where TYPE can be any data type, int , float , string , etc. 
+
+Example:
+
+```go 
+var p *int
+```
