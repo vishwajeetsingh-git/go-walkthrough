@@ -208,3 +208,11 @@ if i % 2 == 0 {
 }
 ```
 
+Like `for`, `if` statement can start with a short execution staement before condition statement.
+
+```go 
+if j := 6; j % 2 == 0 { 
+    fmt.Println("even")
+}
+```
+
