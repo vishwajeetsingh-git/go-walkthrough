@@ -189,3 +189,12 @@ You can drop the semicolons from the previous snippet and it becomes equivalent 
 	}
 ```
 
+You can drop the condition statement also. And the for loop becomes `forever` loop like 
+while(1) or for(;;) in C
+
+```go 
+for {
+		fmt.Println("This will run forever")
+	}
+```
+

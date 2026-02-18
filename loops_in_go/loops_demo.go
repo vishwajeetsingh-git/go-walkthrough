@@ -21,4 +21,9 @@ func main()	 {
 		fmt.Printf("While loop iteration %d\n", k)
 		k++
 	}
+
+	//infinite loop
+	for {
+		fmt.Println("This will run forever")
+	}
 }
