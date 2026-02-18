@@ -12,4 +12,12 @@ func main () {
 	if j := 6; j % 2 == 0 { 
 		fmt.Println("even")
 	}
+
+	//variable declared in an if statement are also accessible in any else if or else blocks that follow it.
+	if k := 7; k % 2 == 0 {
+		fmt.Println("even : ", k)
+	} else {
+		fmt.Println("odd : ", k)
+	}
+
 }

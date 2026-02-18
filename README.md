@@ -216,3 +216,29 @@ if j := 6; j % 2 == 0 {
 }
 ```
 
+variable declared in short if statement are only accessible inside the if paranthesis. 
+
+```go 
+
+if i:=0; i < 5 {
+    return 0
+}
+
+return i
+
+```
+
+The above snippet is invalid because i is being accessed out of if block. 
+
+The `if` short statement variable can be accessed by else block if the `if` statement has an `else` block
+
+```go 
+
+if k := 7; k % 2 == 0 {
+    fmt.Println("even : ", k)
+} else {
+    fmt.Println("odd : ", k)
+}
+```
+
+
