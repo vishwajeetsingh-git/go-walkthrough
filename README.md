@@ -177,3 +177,15 @@ Example :
 	}
 
 ```
+
+You can drop the semicolons from the previous snippet and it becomes equivalent to C's while loop
+
+```go 
+// for is go's while
+	k := 0 
+	for k < 5 {
+		fmt.Printf("While loop iteration %d\n", k)
+		k++
+	}
+```
+
