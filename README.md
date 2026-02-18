@@ -140,3 +140,7 @@ you need to initialize it using.
 ```go 
 messages = make(map[string]string)
 ```
+
+## Lesson 7 
+
+In this I learnt that you can write test for your go module in `modulename_test.go` file `_test.go` prefix tells go compiler to run the functions contained in this file to be executed when we run `go test`
