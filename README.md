@@ -198,3 +198,13 @@ for {
 	}
 ```
 
+## Lesson 9 
+
+Like Go's for Go's if also doesn't need paranthesis surrounding the condition statement. But requires the braces. 
+
+```go
+if i % 2 == 0 {
+    fmt.Println("even")
+}
+```
+
