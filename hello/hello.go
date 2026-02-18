@@ -6,9 +6,10 @@ import "log"
 func main(){
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
-	message, err := greetings.Greet("V")
+	persons := []string{"Vishwajeet", "Vaishnavi", "Vansh"} 
+	messages, err := greetings.Hellos(persons)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(message)
+	fmt.Println(messages)
 }

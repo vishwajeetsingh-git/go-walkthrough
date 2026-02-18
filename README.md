@@ -86,5 +86,57 @@ import (
 )
 ```
 
+## Lesson 6 
 
+In this lesson I learnt that I was calling wrong this `array` in the previous lesson. Actually it is a `slice`. 
 
+The key difference between an array and a slice is that an array has a fixed size which is part of its type, while a slice has dynamic size and can grow using append. You cannot resize an array, but you can append elements to a slice. 
+
+Array Initilization:
+
+```go 
+a := [5]int{1,2,3,4,5}
+```
+Slice Initialization:
+
+```go 
+s := []int{1,2,3}
+```
+
+With var declaration:
+
+Array:
+
+```go 
+var a [5]int
+```
+
+Slice:
+
+```go
+var s []int
+```
+
+I learnt about `map` in go. We can think of map equivalent to Python `dict`. map is used to store key-value pairs. 
+The snippets below show different ways of creating and using maps. 
+
+```go
+messages := make(map[string]string) // this is correct syntax
+// it initializes the map and returns a reference to it. The make function is used to create slices, maps, and channels in Go. When you use make to create a map, it allocates memory for the map and initializes it so that you can start adding key-value pairs to it immediately.
+```
+
+```go
+messages := map[string]string{} // this is also correct syntax. It creates an empty map literal and assigns it to the variable messages. This syntax is more concise and achieves the same result as using make.
+
+```
+
+```go
+var messages map[string]string // This declaration creates a nil map. It must be initialized before adding key-value pairs, otherwise writing to it causes a runtime panic.
+```
+
+if you don't want runtime panic while adding the value to last map. 
+you need to initialize it using. 
+
+```go 
+messages = make(map[string]string)
+```
