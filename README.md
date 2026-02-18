@@ -162,3 +162,18 @@ Like C it also has three parts.
 initialization, condition and post statement 
 
 Unlike C the paranthesis around the for loop components is not required. But the statement braces { } are required. 
+
+The init and post statement in go for loop are optional. 
+
+Example :
+
+```go 
+
+// for loop with no pre and post statements 
+	j := 5
+	for ; j > 0 ; {
+		fmt.Printf("Countdown: %d\n", j)
+		j--
+	}
+
+```
