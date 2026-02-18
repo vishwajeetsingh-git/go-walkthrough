@@ -23,4 +23,10 @@ func main() {
 	//change struct fields
 	e.Age = 26
 	fmt.Println(e.Age)
+
+	// structs fields can be accessed through a struct pointer.
+	// the struct pointer is automatically dereferenced.
+	p := &e
+	fmt.Println("Name using Pointer to Struct e :",p.Name)
+	fmt.Println("Age using Pointer to Struct e :",p.Age)
 }
