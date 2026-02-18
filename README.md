@@ -277,3 +277,47 @@ vsr@phoenix:~/go_tutorial/go-walkthrough/defer_in_go$ go run .
 hello
 world
 ```
+
+### Stacking defers
+
+
+Deferred function calls are pushed onto a stack. When a function returns, its deferred calls are executed in last-in-first-out order.
+
+```go
+
+
+package main
+
+import "fmt"
+
+func main() {
+
+	defer fmt.Println("Counting done")
+
+	for i := 1; i <= 10; i++ {
+		defer fmt.Println(i)
+	}
+
+	fmt.Println("Counting...")
+}	
+
+```
+
+Output:
+
+```bash
+vsr@phoenix:~/go_tutorial/go-walkthrough/defer_in_go$ go run .
+Counting...
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Counting done
+```
+
