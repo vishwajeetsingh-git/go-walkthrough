@@ -1,12 +1,24 @@
 package greetings
 
-import "fmt"
-import "errors"
+import (
+	"fmt"
+	"errors"
+	"math/rand"
+)
 
 func Greet(name string) (string, error) {
 	if name == "" {
 		return "", errors.New("empty name ")
 	}
-	message := fmt.Sprintf("Hello, %v. Welcome!", name)
+	message := fmt.Sprintf(randomFormat(), name)
 	return message, nil
+}
+
+func randomFormat() string {
+	formats := []string{
+		"Hi, %v. Welcome!",
+		"Great to see you, %v!",
+		"Hail, %v! Well met!",
+	}
+	return formats[rand.Intn(len(formats))]
 }

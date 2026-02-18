@@ -55,5 +55,36 @@ greetings: empty name
 exit status 1
 ```
 
+## Lesson 5 
+
+I learnt how to define an array of strings. We already know that `:=` is used declaring and defining a variable. 
+
+Given below is syntax to declare and initilize an array of strings. 
+
+```go
+greetings := []string{
+    "Hello",
+    "Welcome",
+    "Hi"
+} 
+
+```
+
+I learnt about a new module which is used for generating random numbers `math/rand`.
+
+We can use fuction `func rand.Intn(n int) int` this accepts an non-zero positive integer and returns a random number <= n 
+
+I just noticed one more thing, A single import statement can import multiple packages/modules.
+
+For example:
+
+```go
+import (
+    "fmt"
+    "error"
+    "math/rand"
+)
+```
+
 
 
