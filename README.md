@@ -144,3 +144,21 @@ messages = make(map[string]string)
 ## Lesson 7 
 
 In this I learnt that you can write test for your go module in `modulename_test.go` file `_test.go` prefix tells go compiler to run the functions contained in this file to be executed when we run `go test`
+
+## Lesson 8 
+
+In go there is only one type of loop which is  `for` loop. The for loop syntax is quite similar to the `C for loop`
+
+Example :
+
+```go
+
+for i := 0; i < 4; i++ {
+
+}
+```
+
+Like C it also has three parts. 
+initialization, condition and post statement 
+
+Unlike C the paranthesis around the for loop components is not required. But the statement braces { } are required. 
