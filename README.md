@@ -41,5 +41,19 @@ I also learnt there is a `nil` keyword in go. `nil` seems to be equivalent to C 
 
 In this code we are returning `nil` as error when a valid string is provided to Hello function. 
 
+## Lesson 4 
+
+In go, there is a log package. We use this package for logging. 
+
+`log.setPrefix` is used for setting prefix in log message.
+
+in this library there is a function `log.Fatal` this accepts a string parameter which is printed to the console and then `os.exit(1)` is called which exits your application. 
+
+Example Output:
+```
+greetings: empty name 
+exit status 1
+```
+
 
 
