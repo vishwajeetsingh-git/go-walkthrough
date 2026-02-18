@@ -14,4 +14,11 @@ func main()	 {
 		fmt.Printf("Countdown: %d\n", j)
 		j--
 	}
+
+	// for is go's while
+	k := 0 
+	for k < 5 {
+		fmt.Printf("While loop iteration %d\n", k)
+		k++
+	}
 }
