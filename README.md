@@ -338,3 +338,20 @@ Example:
 ```go 
 var p *int
 ```
+
+## Lesson 13 
+
+Structs in Go.
+
+A struct is a collection of fields. 
+
+Given below is an example of Struct 
+
+```go
+
+type Student struct {
+    name string 
+    roll_no int
+}
+
+```
