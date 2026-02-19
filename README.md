@@ -486,5 +486,17 @@ Modified slice from array: [25 30 40]
 Original array after modification: [10 25 30 40 50]
 ```
 
+##### Slice Length and Capacity
+A slice has a length and a capacity. 
+
+Length = The no. of items a slice contain
+Capacity = The no. of items the underlying array can contain, counting from the first element in the slice. 
+
+So in the above example. 
+
+The length of `arr` is 5. 
+And the length of the `slice` is 3. 
+But the capacity of the `slice` is 4. 
+
 
 
