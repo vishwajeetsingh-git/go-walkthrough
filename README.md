@@ -433,3 +433,58 @@ or
 numbers := []int{}
 ```
 
+We can create slices from an array. 
+
+```go
+// slice from an array
+arr := [5]int{10, 20, 30, 40, 50}
+var sliceFromArr []int = arr[1:4] // This creates a slice that includes elements from index 1 to 3 (20, 30, 40)
+fmt.Println("Slice from array:", sliceFromArr)
+```
+
+Slices are `reference types`. Slices are reference to the underlying array. 
+When you create a slice an underlying array is created and the slice references to it. 
+Changing the elements of a slice modifies underlying array of the slice. 
+
+In the above snippet we created an array with elements {10, 20, 30, 40, 50}
+and created a slice using elements 1 to 3 {20, 30, 40}
+
+The code snippet below modifies the element 0 of the slice. 
+
+```go
+
+sliceFromArr[0] = 25 // This modifies the first element of the slice
+
+```
+
+Eventually the underlying array `arr` element at index 1 is also modified to 25.
+
+```go 
+
+	// slice from an array
+	arr := [5]int{10, 20, 30, 40, 50}
+	var sliceFromArr []int = arr[1:4] // This creates a slice that includes elements from index 1 to 3 (20, 30, 40)
+	fmt.Println("Slice from array:", sliceFromArr)
+
+	// slices are like references to arrays. When you create a slice from an array,
+	// it does not copy the elements of the array. Instead,
+	// it creates a reference to the original array.
+	// This means that if you modify the elements of the slice,
+	// it will also modify the corresponding elements in the original array.
+	fmt.Println("Original array before modification:", arr)
+	sliceFromArr[0] = 25 // This modifies the first element of the slice, which is also the second element of the original array
+	fmt.Println("Modified slice from array:", sliceFromArr)
+	fmt.Println("Original array after modification:", arr)
+```
+
+OUTPUT:
+
+```bash
+Slice from array: [20 30 40]
+Original array before modification: [10 20 30 40 50]
+Modified slice from array: [25 30 40]
+Original array after modification: [10 25 30 40 50]
+```
+
+
+
