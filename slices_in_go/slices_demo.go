@@ -67,6 +67,18 @@ func main() {
 	b := make([]int, 0, 5)
 	printSlice(b)
 
+
+	// Appending to a slice grows the slice as needed.
+	var s1 []int
+	s1 = append(s1, 0)
+	printSlice(s1)
+
+	s1 = append(s1, 1)
+	printSlice(s1)
+	
+	s1 = append(s1, 2, 3, 4)
+	printSlice(s1)
+
 }
 
 

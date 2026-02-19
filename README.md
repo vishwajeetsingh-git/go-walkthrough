@@ -502,6 +502,12 @@ But the capacity of the `slice` is 4.
 
 A `nil` slice or `zero` slice has 0 length and 0 capacity. 
 
+##### Appending to a slice
+
+We can use built-in function `append` to grow a slice if needed.
+
+
+
 
 
 
