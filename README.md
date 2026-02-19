@@ -415,3 +415,21 @@ var a [10]int
 declares a variable a as an array of ten integers.
 
 An array's length is part of its type, so arrays cannot be resized. This seems limiting, but don't worry; Go provides a convenient way of working with arrays.
+
+## Lesson 15 
+
+I learnt about slices. An array has a fixed size. A slice on the other hand has a dynamic size. 
+The type []T is a slice with elements of type T
+
+for example:
+
+```go 
+var numbers []int
+```
+
+or 
+
+```go 
+numbers := []int{}
+```
+
