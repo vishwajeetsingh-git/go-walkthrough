@@ -506,6 +506,23 @@ A `nil` slice or `zero` slice has 0 length and 0 capacity.
 
 We can use built-in function `append` to grow a slice if needed.
 
+## Lesson 16 
+
+#### `Range`
+
+we can use range with for loop to iterate over a slice or
+array
+
+```go
+
+//range form of for loop to iterate over a slice
+pow := []int{2, 4, 8, 16, 32}
+for index, value := range pow {
+    fmt.Printf("2^%d = %d\n", index, value)
+}
+
+```
+
 
 
 

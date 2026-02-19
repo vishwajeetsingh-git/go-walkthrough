@@ -23,7 +23,14 @@ func main()	 {
 	}
 
 	//infinite loop
-	for {
-		fmt.Println("This will run forever")
+	// for {
+	// 	fmt.Println("This will run forever")
+	// }
+
+
+	//range form of for loop to iterate over a slice
+	pow := []int{2, 4, 8, 16, 32}
+	for index, value := range pow {
+		fmt.Printf("2^%d = %d\n", index, value)
 	}
 }
