@@ -57,6 +57,16 @@ func main() {
 		fmt.Println("nil!")
 	}
 
+	//slice using make
+
+	a := make([]int, 5)
+	printSlice(a)
+
+	// To specify a capacity, pass a third 
+	// argument to make to allocate a larger array.
+	b := make([]int, 0, 5)
+	printSlice(b)
+
 }
 
 
