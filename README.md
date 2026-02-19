@@ -498,5 +498,10 @@ The length of `arr` is 5.
 And the length of the `slice` is 3. 
 But the capacity of the `slice` is 4. 
 
+##### `nil` Slice 
+
+A `nil` slice or `zero` slice has 0 length and 0 capacity. 
+
+
 
 

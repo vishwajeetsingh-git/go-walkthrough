@@ -51,6 +51,11 @@ func main() {
 	s = s[2:]
 	printSlice(s)
 
+	var nilslice []int
+	fmt.Println("nil slice:", nilslice, "length:", len(nilslice), "capacity:", cap(nilslice))
+	if nilslice == nil {
+		fmt.Println("nil!")
+	}
 
 }
 
