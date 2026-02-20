@@ -597,6 +597,78 @@ If you remove the pointer receiver from the Scale method
 you won't be able to modify the value of v.X , v.Y.
 
 
+# Goroutines 
+
+The reason I started learning go is `Goroutines`. 
+
+`Goroutine` is a lightweight thread managed by go runtime. 
+
+To create a goroutine we just need to use `go` keyword before a function call. 
+
+Example :
+
+```go 
+
+go printHello()
+
+```
+
+Let's take an example of following snippet:
+
+```go 
+
+package main
+
+import "fmt"
+import "time"
+
+func printHello() {
+	for i := 0; i < 5; i++ {
+		fmt.Printf("%d : Hello from Goroutine: %d\n",time.Now().UnixMilli(), i)
+		time.Sleep(1000 * time.Millisecond)
+	}
+}
+
+func printNumbers() {
+	for i := 0; i < 5; i++ {
+		fmt.Printf("%d : Goroutine: %d\n",time.Now().UnixMilli(), i)
+		time.Sleep(1000 * time.Millisecond)
+	}
+}
+
+func main() {
+	fmt.Println("Goroutines Demo")
+
+	go printHello()
+	printNumbers()
+}
+
+```
+
+The code is very small. The main function has three statements. A print stament and two function calls. 
+
+printHello - prints a line 5 times at 1000 milliseconds interval
+
+printNumbers - also prints another line 5 times at 1000 milliseconds interval
+
+
+Without `go` keyword before the printHello function call, the printHello would have executed first. and after 5 seconds the printNumbers would have executed. 
+
+But Using `go` with printHello yielded:
+
+```bash
+Goroutines Demo
+1771593022167 : Goroutine: 0
+1771593022167 : Hello from Goroutine: 0
+1771593023168 : Goroutine: 1
+1771593023168 : Hello from Goroutine: 1
+1771593024168 : Goroutine: 2
+1771593024168 : Hello from Goroutine: 2
+1771593025168 : Goroutine: 3
+1771593025169 : Hello from Goroutine: 3
+1771593026170 : Hello from Goroutine: 4
+1771593026170 : Goroutine: 4
+```
 
 
 
