@@ -19,4 +19,14 @@ func main() {
 	msg := <-ch
 	fmt.Println("Received message from Goroutine:")
 	fmt.Println(msg)
+
+
+	// channels can be buffered 
+	bufferedCh := make(chan string, 2)
+	bufferedCh <- "Message 1"
+	bufferedCh <- "Message 2"
+
+	fmt.Println("Messages in buffered channel:")
+	fmt.Println(<-bufferedCh)
+	fmt.Println(<-bufferedCh)
 }
