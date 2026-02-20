@@ -669,7 +669,33 @@ Goroutines Demo
 1771593026170 : Hello from Goroutine: 4
 1771593026170 : Goroutine: 4
 ```
+# Channels 
 
+In the previous demo we understood about goroutines. So there must be something which we can use to sync the goroutines. Suppose we spawned a goroutine, but the caller needs to know when the the goroutine has done with its execution and it has the response which we wanted. 
+
+A Channel is a typed conduit (pipe) through which we can send/recieve values of specific type. 
+
+We can use make function to create a channel 
+
+```go 
+
+ch := make(chan int)
+```
+In the above snippet we created a channel of int type. It means we can send/recieve int value to/from this channel.
+
+To send/recive values to/from channel we use `<-`. This is called channel operator. 
+
+Send a value to a channel:
+
+```go
+i := 1
+ch <- i
+```
+Receive value from the channel:
+
+```go
+k := <-ch
+```
 
 
 
